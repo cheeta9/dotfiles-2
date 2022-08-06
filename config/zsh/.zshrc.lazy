@@ -22,6 +22,10 @@ zinit wait lucid light-mode for \
 zinit wait'1' lucid light-mode for \
     @'hlissner/zsh-autopair'
 
+### programs ###
+zinit wait lucid light-mode as'program' from'gh-r' for \
+    pick'delta*/delta'  @'dandavison/delta'
+
 ### zsh plugins ###
 zinit wait lucid blockf light-mode for \
     atload'async_init' @'mafredri/zsh-async' \
