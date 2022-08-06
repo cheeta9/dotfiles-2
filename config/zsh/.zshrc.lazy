@@ -7,10 +7,6 @@ alias fig="docker-compose"
 alias fir="docker-compose run --rm"
 alias fie="docker-compose exec"
 
-# key bind
-#bindkey '^j' autosuggest-execute
-#bindkey '^k' autosuggest-accept
-
 ### zsh plugins ###
 zinit wait lucid blockf light-mode for \
     atload'async_init' @'mafredri/zsh-async' \

@@ -31,6 +31,10 @@ setopt INTERACTIVE_COMMENTS
 setopt PRINT_EIGHT_BIT
 setopt PUSHD_IGNORE_DUPS
 
+### key bind ###
+bindkey '^j' autosuggest-execute
+bindkey '^k' autosuggest-accept
+
 ### theme ###
 zinit light sindresorhus/pure
 zstyle :prompt:pure:path color cyan
