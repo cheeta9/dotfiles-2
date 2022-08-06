@@ -33,6 +33,7 @@ setopt PUSHD_IGNORE_DUPS
 
 ### theme ###
 zinit light sindresorhus/pure
+zstyle :prompt:pure:path color cyan
 
 ### rbenv ###
 export PATH="$HOME/.rbenv/bin:$PATH"
