@@ -1,30 +1,38 @@
-### Added by Zinit's installer
-if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
-    print -P "%F{33} %F{220}Installing %F{33}ZDHARMA-CONTINUUM%F{220} Initiative Plugin Manager (%F{33}zdharma-continuum/zinit%F{220})…%f"
-    command mkdir -p "$HOME/.local/share/zinit" && command chmod g-rwX "$HOME/.local/share/zinit"
-    command git clone https://github.com/zdharma-continuum/zinit "$HOME/.local/share/zinit/zinit.git" && \
-        print -P "%F{33} %F{34}Installation successful.%f%b" || \
-        print -P "%F{160} The clone has failed.%f%b"
-fi
-
-source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
-autoload -Uz _zinit
-(( ${+_comps} )) && _comps[zinit]=_zinit
-
-# Load a few important annexes, without Turbo
-# (this is currently required for annexes)
-zinit light-mode for \
-    zdharma-continuum/zinit-annex-as-monitor \
-    zdharma-continuum/zinit-annex-bin-gem-node \
-    zdharma-continuum/zinit-annex-patch-dl \
-    zdharma-continuum/zinit-annex-rust
-
-### End of Zinit's installer chunk
+### zinit ###
+typeset -gAH ZINIT
+ZINIT[HOME_DIR]="$XDG_DATA_HOME/zinit"
+ZINIT[ZCOMPDUMP_PATH]="$XDG_STATE_HOME/zcompdump"
+source "${ZINIT[HOME_DIR]}/bin/zinit.zsh"
 
 ### history ###
 export HISTFILE="$XDG_STATE_HOME/zsh_history"
 export HISTSIZE=12000
 export SAVEHIST=10000
+
+zshaddhistory() {
+    local line="${1%%$'\n'}"
+    [[ ! "$line" =~ "^(cd|history|jj?|lazygit|la|ll|ls|rm|rmdir|trash)($| )" ]]
+}
+
+### option ###
+setopt APPEND_HISTORY
+setopt AUTO_CD
+setopt AUTO_PUSHD
+setopt EXTENDED_HISTORY
+setopt GLOBDOTS
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_IGNORE_SPACE
+setopt HIST_REDUCE_BLANKS
+setopt HIST_SAVE_NO_DUPS
+setopt MAGIC_EQUAL_SUBST
+setopt NO_FLOW_CONTROL
+setopt NO_SHARE_HISTORY
+setopt INTERACTIVE_COMMENTS
+setopt PRINT_EIGHT_BIT
+setopt PUSHD_IGNORE_DUPS
+
+### theme ###
+zinit light sindresorhus/pure
 
 ### rbenv ###
 export PATH="$HOME/.rbenv/bin:$PATH"
