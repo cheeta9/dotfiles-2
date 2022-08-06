@@ -7,6 +7,9 @@ alias fig="docker-compose"
 alias fir="docker-compose run --rm"
 alias fie="docker-compose exec"
 
+### ripgrep ###
+export RIPGREP_CONFIG_PATH="$XDG_CONFIG_HOME/ripgrep/config"
+
 ### zsh-history-substring-search ###
 __zsh_history_substring_search_atload() {
     bindkey "${terminfo[kcuu1]}" history-substring-search-up   # arrow-up
@@ -25,7 +28,8 @@ zinit wait'1' lucid light-mode for \
 ### programs ###
 zinit wait lucid light-mode as'program' from'gh-r' for \
     pick'delta*/delta'  @'dandavison/delta' \
-    pick'mmv*/mmv'      @'itchyny/mmv'
+    pick'mmv*/mmv'      @'itchyny/mmv' \
+    pick'ripgrep*/rg'   @'BurntSushi/ripgrep'
 
 ### zsh plugins ###
 zinit wait lucid blockf light-mode for \
