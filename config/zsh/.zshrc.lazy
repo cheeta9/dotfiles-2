@@ -112,3 +112,13 @@ zinit wait lucid light-mode for \
 zinit wait lucid light-mode as'program' for \
     atclone'rm -f *.{py,bats}' atpull'%atclone' \
     @'mrowa44/emojify'
+
+### Forgit ###
+__forgit_atload() {
+    export FORGIT_INSTALL_DIR="$PWD"
+    export FORGIT_NO_ALIASES=1
+}
+zinit wait lucid light-mode as'program' for \
+    atload'__forgit_atload' \
+    pick'bin/git-forgit' \
+    @'wfxr/forgit'
