@@ -1,11 +1,9 @@
 ### aliases ###
-alias ll='ls -l'
 alias la='ls -a'
-alias lla='ls -al'
-alias be="bundle exec"
-alias fig="docker-compose"
-alias fir="docker-compose run --rm"
-alias fie="docker-compose exec"
+alias ll='ls -al'
+alias cp='cp -i'
+alias mv='mv -i'
+alias rm='rm -i'
 
 ### FZF ###
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
