@@ -134,3 +134,13 @@ __replace_multiple_dots_atload() {
 zinit wait lucid light-mode for \
     atload'__replace_multiple_dots_atload' \
     @'momo-lab/zsh-replace-multiple-dots'
+
+### chpwd-recent-dirs ###
+add-zsh-hook chpwd chpwd_recent_dirs
+zstyle ':chpwd:*' recent-dirs-file "$XDG_STATE_HOME/chpwd-recent-dirs"
+
+### autoloads ###
+autoload -Uz cdr
+autoload -Uz chpwd_recent_dirs
+autoload -Uz _zinit
+zpcompinit
