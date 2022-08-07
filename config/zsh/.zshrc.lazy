@@ -122,3 +122,21 @@ zinit wait lucid light-mode as'program' for \
     atload'__forgit_atload' \
     pick'bin/git-forgit' \
     @'wfxr/forgit'
+
+### zsh-replace-multiple-dots ###
+__replace_multiple_dots_atload() {
+    replace_multiple_dots_exclude_go() {
+        if [[ "$LBUFFER" =~ '^go ' ]]; then
+            zle self-insert
+        else
+            zle .replace_multiple_dots
+        fi
+    }
+
+    zle -N .replace_multiple_dots replace_multiple_dots
+    zle -N replace_multiple_dots replace_multiple_dots_exclude_go
+}
+
+zinit wait lucid light-mode for \
+    atload'__replace_multiple_dots_atload' \
+    @'momo-lab/zsh-replace-multiple-dots'
