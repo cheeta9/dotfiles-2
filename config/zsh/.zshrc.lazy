@@ -7,6 +7,10 @@ alias fig="docker-compose"
 alias fir="docker-compose run --rm"
 alias fie="docker-compose exec"
 
+### FZF ###
+export FZF_DEFAULT_OPTS='--reverse --border --ansi --bind="ctrl-d:print-query,ctrl-p:replace-query"'
+export FZF_DEFAULT_COMMAND='fd --hidden --color=always'
+
 ### ripgrep ###
 export RIPGREP_CONFIG_PATH="$XDG_CONFIG_HOME/ripgrep/config"
 
