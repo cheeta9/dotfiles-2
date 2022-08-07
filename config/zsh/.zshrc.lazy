@@ -25,6 +25,13 @@ zinit wait lucid light-mode for \
 zinit wait'1' lucid light-mode for \
     @'hlissner/zsh-autopair'
 
+### zsh plugins ###
+zinit wait lucid blockf light-mode for \
+    atload'async_init' @'mafredri/zsh-async' \
+    @'zsh-users/zsh-autosuggestions' \
+    @'zsh-users/zsh-completions' \
+    @'zdharma-continuum/fast-syntax-highlighting'
+
 ### programs ###
 zinit wait lucid light-mode as'program' from'gh-r' for \
     pick'delta*/delta'  @'dandavison/delta' \
@@ -37,9 +44,15 @@ zinit wait lucid light-mode as'program' from'gh-r' for \
     atclone'./gh*/bin/gh completion -s zsh >_gh' atpull'%atclone' \
     @'cli/cli'
 
-### zsh plugins ###
-zinit wait lucid blockf light-mode for \
-    atload'async_init' @'mafredri/zsh-async' \
-    @'zsh-users/zsh-autosuggestions' \
-    @'zsh-users/zsh-completions' \
-    @'zdharma-continuum/fast-syntax-highlighting'
+### exa ###
+__exa_atload() {
+    alias ls='exa --group-directories-first'
+    alias la='exa --group-directories-first -a'
+    alias ll='exa --group-directories-first -al --header --color-scale --git --icons --time-style=long-iso'
+    alias tree='exa --group-directories-first -T --icons'
+}
+zinit wait lucid light-mode as'program' from'gh-r' for \
+    pick'bin/exa' \
+    atclone'cp -f completions/exa.zsh _exa' atpull'%atclone' \
+    atload'__exa_atload' \
+    @'ogham/exa'
