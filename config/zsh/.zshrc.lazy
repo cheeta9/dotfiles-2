@@ -19,6 +19,8 @@ __zsh_history_substring_search_atload() {
     bindkey "${terminfo[kcud1]}" history-substring-search-down # arrow-down
     bindkey "^[[A" history-substring-search-up   # arrow-up
     bindkey "^[[B" history-substring-search-down # arrow-down
+    bindkey "k" history-substring-search-up
+    bindkey "j" history-substring-search-down
 }
 zinit wait lucid light-mode for \
     atload'__zsh_history_substring_search_atload' \
