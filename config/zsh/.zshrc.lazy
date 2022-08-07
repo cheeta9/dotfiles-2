@@ -62,3 +62,12 @@ zinit wait lucid light-mode as'program' from'gh-r' for \
     mv'yq* -> yq' \
     atclone'./yq shell-completion zsh >_yq' atpull'%atclone' \
     @'mikefarah/yq'
+
+### hgrep ###
+__hgrep_atload() {
+    alias hgrep="hgrep --hidden --glob='!.git/'"
+}
+zinit wait lucid light-mode as'program' from'gh-r' for \
+    pick'hgrep*/hgrep' \
+    atload'__hgrep_atload' \
+    @'rhysd/hgrep'
