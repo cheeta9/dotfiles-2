@@ -182,6 +182,12 @@ snippets:
     context:
       lbuffer: ^git\s
 
+  - name: git ss
+    keyword: ss
+    snippet: status -s
+    context:
+      lbuffer: ^git\s
+
   # git switch
   - name: git sw
     keyword: sw
