@@ -4,6 +4,22 @@ ZINIT[HOME_DIR]="$XDG_DATA_HOME/zinit"
 ZINIT[ZCOMPDUMP_PATH]="$XDG_STATE_HOME/zcompdump"
 source "${ZINIT[HOME_DIR]}/bin/zinit.zsh"
 
+### paths ###
+typeset -U path
+typeset -U fpath
+
+path=(
+    "$HOME/.local/bin"(N-/)
+    "$DENO_INSTALL/bin"(N-/)
+    "$XDG_CONFIG_HOME/scripts/bin"(N-/)
+    "$path[@]"
+)
+
+fpath=(
+    "$XDG_DATA_HOME/zsh/completions"(N-/)
+    "$fpath[@]"
+)
+
 ### history ###
 export HISTFILE="$XDG_STATE_HOME/zsh_history"
 export HISTSIZE=12000
