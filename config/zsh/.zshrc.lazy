@@ -56,3 +56,9 @@ zinit wait lucid light-mode as'program' from'gh-r' for \
     atclone'cp -f completions/exa.zsh _exa' atpull'%atclone' \
     atload'__exa_atload' \
     @'ogham/exa'
+
+### yq ###
+zinit wait lucid light-mode as'program' from'gh-r' for \
+    mv'yq* -> yq' \
+    atclone'./yq shell-completion zsh >_yq' atpull'%atclone' \
+    @'mikefarah/yq'
