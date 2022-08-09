@@ -66,6 +66,19 @@ snippets:
     context:
       lbuffer: ^git\s
 
+  # git checkout
+  - name: git co
+    keyword: co
+    snippet: checkout
+    context:
+      lbuffer: ^git\s
+
+  - name: git cob
+    keyword: cob
+    snippet: checkout -b
+    context:
+      lbuffer: ^git\s
+
   # git cherry-pick
   - name: git cp
     keyword: cp
