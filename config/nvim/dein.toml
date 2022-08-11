@@ -21,9 +21,6 @@ depends = ['vim-airline']
 ### colorschemes ###
 [[plugins]]
 repo = 'tomasiser/vim-code-dark'
-hook_add = '''
-colorscheme codedark
-'''
 
 [[plugins]]
 repo = 'romgrk/doom-one.vim'
