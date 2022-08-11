@@ -35,8 +35,8 @@ set runtimepath+=$XDG_DATA_HOME/dein/repos/github.com/Shougo/dein.vim
 if dein#load_state($XDG_DATA_HOME . '/dein')
     call dein#begin($XDG_DATA_HOME . '/dein')
 
-    call dein#load_toml($XDG_CONFIG_HOME . '/nvim/dein.toml', {'lazy': 0})
-    call dein#load_toml($XDG_CONFIG_HOME . '/nvim/lazy.toml', {'lazy': 1})
+    call dein#load_toml($XDG_CONFIG_HOME . '/nvim/dein.toml')
+    "call dein#load_toml($XDG_CONFIG_HOME . '/nvim/lazy.toml', {'lazy': 1})
 
     call dein#end()
     call dein#save_state()
