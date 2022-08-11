@@ -63,6 +63,11 @@ export PATH=$HOME/.nodebrew/current/bin:$PATH
 export PATH="/Users/takahiro.sakaguchi/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
 
+### key binds ###
+bindkey '^a' autosuggest-accept
+bindkey '^e' autosuggest-execute
+bindkey '^q' autosuggest-clear
+
 ### plugins ###
 zinit wait lucid null for \
     atinit'source "$ZDOTDIR/.zshrc.lazy"' \
