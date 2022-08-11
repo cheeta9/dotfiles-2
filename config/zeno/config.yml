@@ -22,6 +22,12 @@ snippets:
     snippet: git
 
   # git add
+  - name: git a
+    keyword: a
+    snippet: add
+    context:
+      lbuffer: ^git\s
+
   - name: git aa
     keyword: aa
     snippet: add -vA
