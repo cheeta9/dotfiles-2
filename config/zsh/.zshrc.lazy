@@ -159,6 +159,20 @@ zinit wait lucid light-mode for \
     atload'__replace_multiple_dots_atload' \
     @'momo-lab/zsh-replace-multiple-dots'
 
+### tealdeer ###
+__tealdeer_atclone() {
+    curl -sSL 'https://raw.githubusercontent.com/dbrgn/tealdeer/main/completion/zsh_tealdeer' -o _tealdeer
+}
+__tealdeer_atload() {
+    export TEALDEER_CONFIG_DIR="$XDG_CONFIG_HOME/tealdeer"
+    export TEALDEER_CACHE_DIR="$XDG_CACHE_HOME/tealdeer"
+}
+zinit wait lucid light-mode as'program' from'gh-r' for \
+    mv'tealdeer* -> tldr' \
+    atclone'__tealdeer_atclone' atpull'%atclone' \
+    atload'__tealdeer_atload' \
+    @'dbrgn/tealdeer'
+
 ### autoloads ###
 autoload -Uz _zinit
 zpcompinit
