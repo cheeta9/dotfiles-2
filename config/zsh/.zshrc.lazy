@@ -141,6 +141,24 @@ zinit wait lucid light-mode for \
     atload'__zeno_atload' \
     @'yuki-yano/zeno.zsh'
 
+### zsh-replace-multiple-dots ###
+__replace_multiple_dots_atload() {
+    replace_multiple_dots_exclude_go() {
+        if [[ "$LBUFFER" =~ '^go ' ]]; then
+            zle self-insert
+        else
+            zle .replace_multiple_dots
+        fi
+    }
+
+    zle -N .replace_multiple_dots replace_multiple_dots
+    zle -N replace_multiple_dots replace_multiple_dots_exclude_go
+}
+
+zinit wait lucid light-mode for \
+    atload'__replace_multiple_dots_atload' \
+    @'momo-lab/zsh-replace-multiple-dots'
+
 ### autoloads ###
 autoload -Uz _zinit
 zpcompinit
