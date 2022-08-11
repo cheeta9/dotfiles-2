@@ -6,27 +6,11 @@ alias mv='mv -i'
 alias rm='rm -i'
 
 ### FZF ###
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_OPTS='--reverse --border --ansi --bind="ctrl-d:print-query,ctrl-p:replace-query"'
 export FZF_DEFAULT_COMMAND='fd --hidden --color=always'
 
 ### ripgrep ###
 export RIPGREP_CONFIG_PATH="$XDG_CONFIG_HOME/ripgrep/config"
-
-### zsh-history-substring-search ###
-__zsh_history_substring_search_atload() {
-    bindkey "${terminfo[kcuu1]}" history-substring-search-up   # arrow-up
-    bindkey "${terminfo[kcud1]}" history-substring-search-down # arrow-down
-    bindkey "^[[A" history-substring-search-up   # arrow-up
-    bindkey "^[[B" history-substring-search-down # arrow-down
-}
-zinit wait lucid light-mode for \
-    atload'__zsh_history_substring_search_atload' \
-    @'zsh-users/zsh-history-substring-search'
-
-### zsh-autopair ###
-zinit wait'1' lucid light-mode for \
-    @'hlissner/zsh-autopair'
 
 ### zsh plugins ###
 zinit wait lucid blockf light-mode for \
@@ -34,61 +18,6 @@ zinit wait lucid blockf light-mode for \
     @'zsh-users/zsh-autosuggestions' \
     @'zsh-users/zsh-completions' \
     @'zdharma-continuum/fast-syntax-highlighting'
-
-### programs ###
-zinit wait lucid light-mode as'program' from'gh-r' for \
-    pick'delta*/delta'  @'dandavison/delta' \
-    pick'mmv*/mmv'      @'itchyny/mmv' \
-    pick'ripgrep*/rg'   @'BurntSushi/ripgrep'
-
-### GitHub CLI ###
-zinit wait lucid light-mode as'program' from'gh-r' for \
-    pick'gh*/bin/gh' \
-    atclone'./gh*/bin/gh completion -s zsh >_gh' atpull'%atclone' \
-    @'cli/cli'
-
-### exa ###
-__exa_atload() {
-    alias ls='exa --group-directories-first'
-    alias la='exa --group-directories-first -a'
-    alias ll='exa --group-directories-first -al --header --color-scale --git --icons --time-style=long-iso'
-    alias tree='exa --group-directories-first -T --icons'
-}
-zinit wait lucid light-mode as'program' from'gh-r' for \
-    pick'bin/exa' \
-    atclone'cp -f completions/exa.zsh _exa' atpull'%atclone' \
-    atload'__exa_atload' \
-    @'ogham/exa'
-
-### yq ###
-zinit wait lucid light-mode as'program' from'gh-r' for \
-    mv'yq* -> yq' \
-    atclone'./yq shell-completion zsh >_yq' atpull'%atclone' \
-    @'mikefarah/yq'
-
-### hgrep ###
-__hgrep_atload() {
-    alias hgrep="hgrep --hidden --glob='!.git/'"
-}
-zinit wait lucid light-mode as'program' from'gh-r' for \
-    pick'hgrep*/hgrep' \
-    atload'__hgrep_atload' \
-    @'rhysd/hgrep'
-
-### navi ###
-__navi_search() {
-    LBUFFER="$(navi --print --query="$LBUFFER")"
-    zle reset-prompt
-}
-__navi_atload() {
-    export NAVI_CONFIG="$XDG_CONFIG_HOME/navi/config.yaml"
-
-    zle -N __navi_search
-    bindkey '^N' __navi_search
-}
-zinit wait lucid light-mode as'program' from'gh-r' for \
-    atload'__navi_atload' \
-    @'denisidoro/navi'
 
 ### zeno.zsh ###
 export ZENO_HOME="$XDG_CONFIG_HOME/zeno"
@@ -107,45 +36,6 @@ zinit wait lucid light-mode for \
     atload'__zeno_atload' \
     @'yuki-yano/zeno.zsh'
 
-### Emojify ###
-zinit wait lucid light-mode as'program' for \
-    atclone'rm -f *.{py,bats}' atpull'%atclone' \
-    @'mrowa44/emojify'
-
-### Forgit ###
-__forgit_atload() {
-    export FORGIT_INSTALL_DIR="$PWD"
-    export FORGIT_NO_ALIASES=1
-}
-zinit wait lucid light-mode as'program' for \
-    atload'__forgit_atload' \
-    pick'bin/git-forgit' \
-    @'wfxr/forgit'
-
-### zsh-replace-multiple-dots ###
-__replace_multiple_dots_atload() {
-    replace_multiple_dots_exclude_go() {
-        if [[ "$LBUFFER" =~ '^go ' ]]; then
-            zle self-insert
-        else
-            zle .replace_multiple_dots
-        fi
-    }
-
-    zle -N .replace_multiple_dots replace_multiple_dots
-    zle -N replace_multiple_dots replace_multiple_dots_exclude_go
-}
-
-zinit wait lucid light-mode for \
-    atload'__replace_multiple_dots_atload' \
-    @'momo-lab/zsh-replace-multiple-dots'
-
-### chpwd-recent-dirs ###
-add-zsh-hook chpwd chpwd_recent_dirs
-zstyle ':chpwd:*' recent-dirs-file "$XDG_STATE_HOME/chpwd-recent-dirs"
-
 ### autoloads ###
-autoload -Uz cdr
-autoload -Uz chpwd_recent_dirs
 autoload -Uz _zinit
 zpcompinit
