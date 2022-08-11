@@ -9,13 +9,6 @@ alias rm='rm -i'
 export FZF_DEFAULT_OPTS='--reverse --border --ansi --bind="ctrl-d:print-query,ctrl-p:replace-query"'
 export FZF_DEFAULT_COMMAND='fd --hidden --color=always'
 
-### zsh plugins ###
-zinit wait lucid blockf light-mode for \
-    atload'async_init' @'mafredri/zsh-async' \
-    @'zsh-users/zsh-autosuggestions' \
-    @'zsh-users/zsh-completions' \
-    @'zdharma-continuum/fast-syntax-highlighting'
-
 ### zeno.zsh ###
 export ZENO_HOME="$XDG_CONFIG_HOME/zeno"
 export ZENO_ENABLE_SOCK=1
