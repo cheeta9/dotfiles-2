@@ -1,3 +1,4 @@
+### aliases ###
 alias la='ls -a'
 alias ll='ls -al'
 alias cp='cp -i'
@@ -8,9 +9,6 @@ alias rm='rm -i'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_OPTS='--reverse --border --ansi --bind="ctrl-d:print-query,ctrl-p:replace-query"'
 export FZF_DEFAULT_COMMAND='fd --hidden --color=always'
-
-### ripgrep ###
-export RIPGREP_CONFIG_PATH="$XDG_CONFIG_HOME/ripgrep/config"
 
 ### zsh plugins ###
 zinit wait lucid blockf light-mode for \
