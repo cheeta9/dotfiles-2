@@ -94,6 +94,12 @@ zinit wait lucid light-mode as'program' from'gh-r' for \
     atload'__exa_atload' \
     @'ogham/exa'
 
+### yq ###
+zinit wait lucid light-mode as'program' from'gh-r' for \
+    mv'yq* -> yq' \
+    atclone'./yq shell-completion zsh >_yq' atpull'%atclone' \
+    @'mikefarah/yq'
+
 ### zeno.zsh ###
 export ZENO_HOME="$XDG_CONFIG_HOME/zeno"
 export ZENO_ENABLE_SOCK=1
