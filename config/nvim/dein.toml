@@ -37,51 +37,51 @@ repo = 'airblade/vim-gitgutter'
 repo = 'tpope/vim-fugitive'
 
 ### defx.nvim ###
-[[plugins]]
-repo = 'Shougo/defx.nvim'
-hook_add = '''
-autocmd FileType defx call s:defx_my_settings()
-function! s:defx_my_settings() abort
-    nnoremap <silent><buffer><expr> <CR>
-        \ !defx#is_directory()
-        \   ? defx#do_action('drop')
-        \   : defx#do_action('open_or_close_tree')
-    nnoremap <silent><buffer><expr> o
-        \ !defx#is_directory()
-        \   ? defx#do_action('drop')
-        \   : defx#is_opened_tree() ? defx#do_action('close_tree') : defx#do_action('open_tree_recursive')
-    nnoremap <silent><buffer><expr> h       defx#do_action('close_tree')
-    nnoremap <silent><buffer><expr> l       defx#do_action('open_tree')
-    nnoremap <silent><buffer><expr> <Left>  defx#do_action('close_tree')
-    nnoremap <silent><buffer><expr> <Right> defx#do_action('open_tree')
-    nnoremap <silent><buffer><expr> r       defx#do_action('redraw')
-    nnoremap <silent><buffer><expr> d       defx#do_action('remove')
-    nnoremap <silent><buffer><expr> c       defx#do_action('copy')
-    nnoremap <silent><buffer><expr> p       defx#do_action('paste')
-    nnoremap <silent><buffer><expr> m       defx#do_action('move')
-    nnoremap <silent><buffer><expr> n       defx#do_action('new_file')
-    nnoremap <silent><buffer><expr> N       defx#do_action('new_directory')
-    nnoremap <silent><buffer><expr> q       defx#do_action('quit')
-    nnoremap <silent><buffer><expr> .       defx#do_action('toggle_ignored_files')
-endfunction
-
-call defx#custom#option('_', {
-\   'columns': 'space:indent:git:icons:filename:type',
-\   'direction': 'topleft',
-\   'split': 'vertical',
-\   'winwidth': 32,
-\ })
-
-nnoremap <silent><C-o> <cmd>Defx -toggle -show-ignored-files<CR>
-'''
-
-[[plugins]]
-repo = 'kristijanhusak/defx-git'
-depends = ['defx.nvim']
-
-[[plugins]]
-repo = 'kristijanhusak/defx-icons'
-depends = ['defx.nvim']
+#[[plugins]]
+#repo = 'Shougo/defx.nvim'
+#hook_add = '''
+#autocmd FileType defx call s:defx_my_settings()
+#function! s:defx_my_settings() abort
+#    nnoremap <silent><buffer><expr> <CR>
+#        \ !defx#is_directory()
+#        \   ? defx#do_action('drop')
+#        \   : defx#do_action('open_or_close_tree')
+#    nnoremap <silent><buffer><expr> o
+#        \ !defx#is_directory()
+#        \   ? defx#do_action('drop')
+#        \   : defx#is_opened_tree() ? defx#do_action('close_tree') : defx#do_action('open_tree_recursive')
+#    nnoremap <silent><buffer><expr> h       defx#do_action('close_tree')
+#    nnoremap <silent><buffer><expr> l       defx#do_action('open_tree')
+#    nnoremap <silent><buffer><expr> <Left>  defx#do_action('close_tree')
+#    nnoremap <silent><buffer><expr> <Right> defx#do_action('open_tree')
+#    nnoremap <silent><buffer><expr> r       defx#do_action('redraw')
+#    nnoremap <silent><buffer><expr> d       defx#do_action('remove')
+#    nnoremap <silent><buffer><expr> c       defx#do_action('copy')
+#    nnoremap <silent><buffer><expr> p       defx#do_action('paste')
+#    nnoremap <silent><buffer><expr> m       defx#do_action('move')
+#    nnoremap <silent><buffer><expr> n       defx#do_action('new_file')
+#    nnoremap <silent><buffer><expr> N       defx#do_action('new_directory')
+#    nnoremap <silent><buffer><expr> q       defx#do_action('quit')
+#    nnoremap <silent><buffer><expr> .       defx#do_action('toggle_ignored_files')
+#endfunction
+#
+#call defx#custom#option('_', {
+#\   'columns': 'space:indent:git:icons:filename:type',
+#\   'direction': 'topleft',
+#\   'split': 'vertical',
+#\   'winwidth': 32,
+#\ })
+#
+#nnoremap <silent><C-o> <cmd>Defx -toggle -show-ignored-files<CR>
+#'''
+#
+#[[plugins]]
+#repo = 'kristijanhusak/defx-git'
+#depends = ['defx.nvim']
+#
+#[[plugins]]
+#repo = 'kristijanhusak/defx-icons'
+#depends = ['defx.nvim']
 
 ### lexima.vim ###
 [[plugins]]
