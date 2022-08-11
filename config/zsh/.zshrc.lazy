@@ -69,6 +69,12 @@ zinit wait lucid blockf light-mode for \
     @'zsh-users/zsh-completions' \
     @'zdharma-continuum/fast-syntax-highlighting'
 
+### programs ###
+zinit wait lucid light-mode as'program' from'gh-r' for \
+    pick'delta*/delta'  @'dandavison/delta' \
+    pick'mmv*/mmv'      @'itchyny/mmv' \
+    pick'ripgrep*/rg'   @'BurntSushi/ripgrep'
+
 ### zeno.zsh ###
 export ZENO_HOME="$XDG_CONFIG_HOME/zeno"
 export ZENO_ENABLE_SOCK=1
