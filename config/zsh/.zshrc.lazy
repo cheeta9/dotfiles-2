@@ -6,6 +6,7 @@ alias mv='mv -i'
 alias rm='rm -i'
 
 ### FZF ###
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_OPTS='--reverse --border --ansi --bind="ctrl-d:print-query,ctrl-p:replace-query"'
 export FZF_DEFAULT_COMMAND='fd --hidden --color=always'
 
