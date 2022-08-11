@@ -1,77 +1,26 @@
+### editorconfig-vim ###
 [[plugins]]
-repo = 'Shougo/dein.vim'
+repo = 'editorconfig/editorconfig-vim'
 
-[[plugins]]
-repo = 'kristijanhusak/vim-hybrid-material'
-
+### vim-airline ###
 [[plugins]]
 repo = 'vim-airline/vim-airline'
+hook_add = '''
+let g:airline_powerline_fonts = 1
+let g:airline_theme = 'deus'
+let g:airline_symbols = {
+\   'branch': "\uf418",
+\   'dirty': "\u00b1",
+\ }
+'''
 
 [[plugins]]
 repo = 'vim-airline/vim-airline-themes'
+depends = ['vim-airline']
+
+### colorschemes ###
+[[plugins]]
+repo = 'tomasiser/vim-code-dark'
 hook_add = '''
-let g:airline_theme='hybrid'
-let g:airline#extensions#ale#enabled = 1
+colorscheme codedark
 '''
-
-[[plugins]]
-repo = 'Yggdroot/indentLine'
-hook_add = '''
-let g:indent_guides_enable_on_vim_startup = 1
-let g:indent_guides_start_level = 2
-let g:indent_guides_guide_size = 1
-'''
-
-[[plugins]] # FileTree
-repo = 'scrooloose/nerdtree'
-hook_add = '''
-nnoremap <silent><C-e> :NERDTreeToggle<CR>
-nmap <Leader><Tab> <C-w>w
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-'''
-
-[[plugins]]
-repo = 'jiangmiao/auto-pairs'
-
-[[plugins]]
-repo = 'kristijanhusak/vim-hybrid-material'
-
-[[plugins]]
-repo = 'Shougo/vimproc.vim'
-build = 'make'
-
-[[plugins]]
-repo = 'Shougo/neomru.vim'
-
-[[plugins]]
-repo = 'Shougo/neosnippet-snippets'
-
-[[plugins]]
-repo = 'Shougo/neosnippet.vim'
-
-[[plugins]]
-repo = 'mattn/emmet-vim'
-hook_add = '''
-  let g:user_emmet_leader_key='<C-Q>'
-'''
-
-[[plugins]]
-repo = 'github/copilot.vim'
-
-[[plugins]]
-repo = 'tpope/vim-fugitive'
-
-[[plugins]]
-repo = 'airblade/vim-gitgutter'
-
-[[plugins]]
-repo = "leafgarland/typescript-vim"
-
-[[plugins]]
-repo = "Quramy/tsuquyomi"
-
-[[plugins]]
-repo = 'neoclide/coc.nvim'
-rev = 'release'
-on_i = 1
-merged = '0'
