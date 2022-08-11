@@ -33,21 +33,21 @@ zshaddhistory() {
 }
 
 ### option ###
-#setopt APPEND_HISTORY
-#setopt AUTO_CD
-#setopt AUTO_PUSHD
-#setopt EXTENDED_HISTORY
-#setopt GLOBDOTS
-#setopt HIST_IGNORE_ALL_DUPS
-#setopt HIST_IGNORE_SPACE
-#setopt HIST_REDUCE_BLANKS
-#setopt HIST_SAVE_NO_DUPS
-#setopt MAGIC_EQUAL_SUBST
-#setopt NO_FLOW_CONTROL
-#setopt NO_SHARE_HISTORY
-#setopt INTERACTIVE_COMMENTS
-#setopt PRINT_EIGHT_BIT
-#setopt PUSHD_IGNORE_DUPS
+setopt APPEND_HISTORY
+setopt AUTO_CD
+setopt AUTO_PUSHD
+setopt EXTENDED_HISTORY
+setopt GLOBDOTS
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_IGNORE_SPACE
+setopt HIST_REDUCE_BLANKS
+setopt HIST_SAVE_NO_DUPS
+setopt MAGIC_EQUAL_SUBST
+setopt NO_FLOW_CONTROL
+setopt NO_SHARE_HISTORY
+setopt INTERACTIVE_COMMENTS
+setopt PRINT_EIGHT_BIT
+setopt PUSHD_IGNORE_DUPS
 
 ### theme ###
 zinit light sindresorhus/pure
