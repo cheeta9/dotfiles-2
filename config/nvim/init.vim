@@ -1,83 +1,5 @@
-""" Options """
-set fenc=utf-8
-set hidden
-set autoread
-set showcmd
-" Indentation
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-set shiftround
-set smarttab
-set list
-" Views
-set title
-set number
-set relativenumber
-set termguicolors
-set cursorline
-set showmatch
-set showtabline=2
-set laststatus=2
-" Controls
-set mouse=a
-set whichwrap=b,s,h,l,<,>,[,],~
-" Search
-set hlsearch
-set incsearch
-set smartcase
-set ignorecase
-" Split
-set splitbelow
-set splitright
-" Backspace
-set backspace=indent,eol,start
-" Menu
-set wildmenu
-set wildmode=longest:full,full
-
-""" Keymaps """
-nnoremap ;      :
-nnoremap <silent>j      gj
-nnoremap <silent>k      gk
-nnoremap <silent><Down> gj
-nnoremap <silent><Up>   gk
-nnoremap <silent>sh     <C-w>h
-nnoremap <silent>sj     <C-w>j
-nnoremap <silent>sk     <C-w>k
-nnoremap <silent>sl     <C-w>l
-nnoremap <silent>sH     <C-w>H
-nnoremap <silent>sJ     <C-w>J
-nnoremap <silent>sK     <C-w>K
-nnoremap <silent>sL     <C-w>L
-nnoremap <silent><C-a>  ^
-nnoremap <silent><C-e>  $
-nnoremap <silent>+      <C-a>
-nnoremap <silent>-      <C-x>
-nnoremap <silent><C-\>  :vsplit<CR>
-nnoremap <silent><C-_>  :split<CR>
-nnoremap <silent><C-h>  :bprev<CR>
-nnoremap <silent><C-l>  :bnext<CR>
-nnoremap <silent><C-w>  :bdelete<CR>
-nnoremap <silent><C-k><C-w> :close<CR>
-inoremap <silent>jj     <ESC>
-inoremap <silent><Down> <C-\><C-o>gj
-inoremap <silent><Up>   <C-\><C-o>gk
-inoremap <silent><S-Tab> <C-\><C-o><<<C-o>I
-inoremap <silent><C-a>  <C-o>I
-inoremap <silent><C-e>  <End>
-vnoremap <silent><C-a>  ^
-vnoremap <silent><C-e>  $
-vnoremap <silent>+      <C-a>gv
-vnoremap <silent>-      <C-x>gv
-tnoremap <silent><ESC>  <C-\><C-n>
-
-let mapleader = "\<Space>"
-nnoremap <Leader>h ^
-nnoremap <Leader>l $
-nnoremap <Leader>m %
-nnoremap <Leader>w :w<CR>
-nnoremap <Leader>q :q<CR>
+runtime! options.vim
+runtime! keymap.vim
 
 function! MyKeyMapsDiff()
     nnoremap <silent>J  /^[+-]<CR>
@@ -113,7 +35,8 @@ set runtimepath+=$XDG_DATA_HOME/dein/repos/github.com/Shougo/dein.vim
 if dein#load_state($XDG_DATA_HOME . '/dein')
     call dein#begin($XDG_DATA_HOME . '/dein')
 
-    call dein#load_toml($XDG_CONFIG_HOME . '/nvim/dein.toml')
+    call dein#load_toml($XDG_CONFIG_HOME . '/nvim/dein.toml', {'lazy': 0})
+    call dein#load_toml($XDG_CONFIG_HOME . '/nvim/lazy.toml', {'lazy': 1})
 
     call dein#end()
     call dein#save_state()
