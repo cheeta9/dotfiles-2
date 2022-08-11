@@ -23,14 +23,14 @@ fpath=(
 )
 
 ### history ###
-export HISTFILE="$XDG_STATE_HOME/zsh_history"
-export HISTSIZE=12000
-export SAVEHIST=10000
-
-zshaddhistory() {
-    local line="${1%%$'\n'}"
-    [[ ! "$line" =~ "^(cd|history|jj?|lazygit|la|ll|ls|rm|rmdir|trash)($| )" ]]
-}
+#export HISTFILE="$XDG_STATE_HOME/zsh_history"
+#export HISTSIZE=12000
+#export SAVEHIST=10000
+#
+#zshaddhistory() {
+#    local line="${1%%$'\n'}"
+#    [[ ! "$line" =~ "^(cd|history|jj?|lazygit|la|ll|ls|rm|rmdir|trash)($| )" ]]
+#}
 
 ### option ###
 #setopt APPEND_HISTORY
