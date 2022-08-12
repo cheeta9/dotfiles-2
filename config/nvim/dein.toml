@@ -4,9 +4,9 @@ repo = 'editorconfig/editorconfig-vim'
 
 ### colorschemes ###
 [[plugins]]
-repo = 'tomasr/molokai'
+repo = 'morhetz/gruvbox'
 hook_add = '''
-  colorscheme molokai
+  colorscheme gruvbox
 '''
 
 ### vim-airline ###
