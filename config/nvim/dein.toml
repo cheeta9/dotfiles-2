@@ -6,7 +6,8 @@ repo = 'editorconfig/editorconfig-vim'
 [[plugins]]
 repo = 'morhetz/gruvbox'
 hook_add = '''
-  colorscheme gruvbox
+colorscheme gruvbox
+let g:gruvbox_hls_cursor = 'orange'
 '''
 
 ### vim-airline ###
@@ -15,10 +16,8 @@ repo = 'vim-airline/vim-airline'
 
 [[plugins]]
 repo = 'vim-airline/vim-airline-themes'
-depends = ['vim-airline']
 hook_add = '''
-let g:airline_theme='hybrid'
-let g:airline#extensions#ale#enabled = 1
+let g:airline_theme='gruvbox'
 '''
 
 [[plugins]]
