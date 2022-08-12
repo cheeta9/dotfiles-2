@@ -2,25 +2,21 @@
 [[plugins]]
 repo = 'editorconfig/editorconfig-vim'
 
+### colorschemes ###
+[[plugins]]
+repo = 'kristijanhusak/vim-hybrid-material'
+
 ### vim-airline ###
 [[plugins]]
 repo = 'vim-airline/vim-airline'
-hook_add = '''
-let g:airline_powerline_fonts = 1
-let g:airline_theme = 'deus'
-let g:airline_symbols = {
-\   'branch': "\uf418",
-\   'dirty': "\u00b1",
-\ }
-'''
 
 [[plugins]]
 repo = 'vim-airline/vim-airline-themes'
 depends = ['vim-airline']
-
-### colorschemes ###
-[[plugins]]
-repo = 'tomasiser/vim-code-dark'
+hook_add = '''
+let g:airline_theme='hybrid'
+let g:airline#extensions#ale#enabled = 1
+'''
 
 [[plugins]]
 repo = 'romgrk/doom-one.vim'
