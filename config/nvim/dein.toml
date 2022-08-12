@@ -4,7 +4,7 @@ repo = 'editorconfig/editorconfig-vim'
 
 ### colorschemes ###
 [[plugins]]
-repo = 'kristijanhusak/vim-hybrid-material'
+repo = 'joshdick/onedark.vim'
 
 ### vim-airline ###
 [[plugins]]
