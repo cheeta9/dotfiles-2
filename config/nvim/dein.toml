@@ -4,9 +4,9 @@ repo = 'editorconfig/editorconfig-vim'
 
 ### colorschemes ###
 [[plugins]]
-repo = 'joshdick/onedark.vim'
+repo = 'tomasr/molokai'
 hook_add = '''
-  colorscheme onedark
+  colorscheme molokai
 '''
 
 ### vim-airline ###
