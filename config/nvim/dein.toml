@@ -7,7 +7,6 @@ repo = 'editorconfig/editorconfig-vim'
 repo = 'morhetz/gruvbox'
 hook_add = '''
 colorscheme gruvbox
-let g:gruvbox_hls_cursor = 'orange'
 '''
 
 ### vim-airline ###
