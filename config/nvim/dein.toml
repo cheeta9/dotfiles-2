@@ -35,13 +35,14 @@ nmap ghp <Plug>(GitGutterPreviewHunk)
 [[plugins]]
 repo = 'tpope/vim-fugitive'
 hook_add = '''
-nnoremap <Leader>ga :Git add %:p<CR><CR>
-nnoremap <Leader>gc :Gcommit<CR><CR>
-nnoremap <Leader>gs :Gstatus<CR>
-nnoremap <Leader>gp :Gpush<CR>
-nnoremap <Leader>gd :Gdiff<CR>
-nnoremap <Leader>gl :Glog<CR>
-nnoremap <Leader>gb :Gblame<CR>
+nnoremap <Leader>ga :G add %:p<CR><CR>
+nnoremap <Leader>gc :G commit<CR><CR>
+nnoremap <Leader>gs :G status<CR>
+nnoremap <Leader>gp :G push<CR>
+nnoremap <Leader>gd :G diff<CR>
+nnoremap <Leader>gl :G log<CR>
+nnoremap <Leader>glo :G log --oneline<CR>
+nnoremap <Leader>gb :G blame<CR>
 '''
 
 ### defx.nvim ###
