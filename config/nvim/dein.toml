@@ -19,9 +19,6 @@ hook_add = '''
 let g:airline_theme='gruvbox'
 '''
 
-[[plugins]]
-repo = 'romgrk/doom-one.vim'
-
 ### vim-gitgutter ###
 [[plugins]]
 repo = 'airblade/vim-gitgutter'
