@@ -17,233 +17,160 @@ snippets:
     snippet: cd ../../..
 
   # git
-  - name: g
+  - name: git
     keyword: g
     snippet: git
 
   # git add
-  - name: git a
-    keyword: a
-    snippet: add
-    context:
-      lbuffer: ^git\s
+  - name: git add
+    keyword: ga
+    snippet: git add {{file}}
 
-  - name: git aa
-    keyword: aa
-    snippet: add -vA
-    context:
-      lbuffer: ^git\s
+  - name: git add all
+    keyword: gaa
+    snippet: git add --all
 
-  - name: git ai
-    keyword: ai
-    snippet: add -i
-    context:
-      lbuffer: ^git\s
+  - name: git add -i
+    keyword: gai
+    snippet: git add -i
 
   # git branch
-  - name: git b
-    keyword: b
-    snippet: branch
-    context:
-      lbuffer: ^git\s
+  - name: git branch
+    keyword: gb
+    snippet: git branch
 
-  - name: git ba
-    keyword: ba
-    snippet: branch -a
-    context:
-      lbuffer: ^git\s
+  - name: git branch -a
+    keyword: gba
+    snippet: git branch -a
 
-  - name: git bd
-    keyword: bd
-    snippet: branch -d
-    context:
-      lbuffer: ^git\s
+  - name: git branch -d
+    keyword: gbd
+    snippet: git branch -d
 
-  - name: git bD
-    keyword: bD
-    snippet: branch -D
-    context:
-      lbuffer: ^git\s
+  - name: git branch -D
+    keyword: gbD
+    snippet: git branch -D
 
   # git commit
-  - name: git c
-    keyword: c
-    snippet: commit
-    context:
-      lbuffer: ^git\s
+  - name: git commit
+    keyword: gc
+    snippet: git commit
 
-  - name: git cam
-    keyword: cam
-    snippet: commit --amend --no-edit
-    context:
-      lbuffer: ^git\s
-
-  - name: git cm
-    keyword: cm
-    snippet: commit -m '{{}}'
-    context:
-      lbuffer: ^git\s
-
-  - name: git C
-    keyword: C
-    snippet: cz
-    context:
-      lbuffer: ^git\s
+  - name: git commit -m
+    keyword: gcm
+    snippet: git commit -m '{{}}'
 
   # git checkout
-  - name: git co
-    keyword: co
-    snippet: checkout
-    context:
-      lbuffer: ^git\s
+  - name: git checkout
+    keyword: gco
+    snippet: git checkout
 
-  - name: git cob
-    keyword: cob
-    snippet: checkout -b
-    context:
-      lbuffer: ^git\s
+  - name: git checkout file
+    keyword: gcof
+    snippet: git checkout -- {{file}}
+
+  - name: git checkout branch file
+    keyword: gcof
+    snippet: git checkout {{branch}} -- {{file}}
+
+  - name: git checkout -b
+    keyword: gcob
+    snippet: git checkout -b
 
   # git cherry-pick
-  - name: git cp
-    keyword: cp
-    snippet: cherry-pick
-    context:
-      lbuffer: ^git\s
+  - name: git cherry-pick
+    keyword: gcp
+    snippet: git cherry-pick
 
   # git diff
-  - name: git st
-    keyword: st
-    snippet: diff --stat
-    context:
-      lbuffer: ^git\s
+  - name: git diff
+    keyword: gd
+    snippet: git diff {{branch}}
 
-  - name: git stat
-    keyword: stat
-    snippet: diff --stat
-    context:
-      lbuffer: ^git\s
+  - name: git diff file
+    keyword: gd
+    snippet: git diff -- {{file}}
 
-  - name: git stats
-    keyword: stats
-    snippet: diff --stat --staged
-    context:
-      lbuffer: ^git\s
+  - name: git diff branch file
+    keyword: gd
+    snippet: git diff {{branch}} -- {{file}}
 
-  - name: git sts
-    keyword: sts
-    snippet: diff --stat --staged
-    context:
-      lbuffer: ^git\s
+  - name: git diff 2 branch
+    keyword: gd
+    snippet: git diff {{branch1}} {{branch2}}
 
-  - name: git dfi
-    keyword: dfi
-    snippet: df --ignore-all-space
-    context:
-      lbuffer: ^git\s
+  - name: git diff 2 branch file
+    keyword: gd
+    snippet: git diff {{branch1}} {{branch2}} -- {{file}}
 
-  - name: git dfs
-    keyword: dfs
-    snippet: df --staged
-    context:
-      lbuffer: ^git\s
+  - name: git diff cached
+    keyword: gdc
+    snippet: git diff --cached
 
-  - name: git dfsi
-    keyword: dfsi
-    snippet: df --staged --ignore-all-space
-    context:
-      lbuffer: ^git\s
+  - name: git diff cached file
+    keyword: gdc
+    snippet: git diff --cached -- {{file}}
 
   # git fetch
-  - name: git f
-    keyword: f
-    snippet: fetch
-    context:
-      lbuffer: ^git\s
+  - name: git fetch
+    keyword: gf
+    snippet: git fetch
 
-  - name: git fu
-    keyword: fu
+  - name: git fetch upstream
+    keyword: gfu
     snippet: fetch upstream
-    context:
-      lbuffer: ^git\s
 
   # git log
-  - name: git lg
-    keyword: lg
-    snippet: graph
-    context:
-      lbuffer: ^git\s
+  - name: git log
+    keyword: gl
+    snippet: git log
 
-  - name: git lgo
-    keyword: lgo
-    snippet: log --oneline -n
-    context:
-      lbuffer: ^git\s
+  - name: git log --oneline
+    keyword: glo
+    snippet: git log --oneline -n 
 
   # git pull
-  - name: git pl
-    keyword: pl
-    snippet: pull
-    context:
-      lbuffer: ^git\s
+  - name: git pull
+    keyword: gpl
+    snippet: git pull
 
   # git push
-  - name: git ps
-    keyword: ps
-    snippet: push
-    context:
-      lbuffer: ^git\s
+  - name: git push
+    keyword: gps
+    snippet: git push
 
-  - name: git psu
-    keyword: psu
-    snippet: push -u origin HEAD
-    context:
-      lbuffer: ^git\s
+  - name: git push -u origin HEAD
+    keyword: gpsu
+    snippet: git push -u origin HEAD
 
-  - name: git pst
-    keyword: pst
-    snippet: push --tags
-    context:
-      lbuffer: ^git\s
+  - name: git push --tags
+    keyword: gpst
+    snippet: git push --tags
 
-  - name: git push -f
+  - name: (git push) -f
     keyword: -f
     snippet: --force-with-lease
     context:
       lbuffer: ^git(\s+\S+)*\s+push\s
 
-  # git rev-parse
-  - name: git root
-    keyword: root
-    snippet: rev-parse --show-toplevel
-    context:
-      lbuffer: ^git\s
-
   # git status
-  - name: git s
-    keyword: s
-    snippet: status
-    context:
-      lbuffer: ^git\s
+  - name: git status
+    keyword: gs
+    snippet: git status
 
-  - name: git ss
-    keyword: ss
-    snippet: status -s
-    context:
-      lbuffer: ^git\s
+  - name: git status -s
+    keyword: gss
+    snippet: git status -s
 
   # git switch
-  - name: git sw
-    keyword: sw
-    snippet: switch
-    context:
-      lbuffer: ^git\s
+  - name: git switch
+    keyword: gsw
+    snippet: git switch
 
   # git tag
   - name: git tags
-    keyword: tags
-    snippet: tag -l --sort=v:refname
-    context:
-      lbuffer: ^git\s
+    keyword: gt
+    snippet: git tag -l --sort=v:refname
 
   # git current branch name
   - name: B
@@ -268,23 +195,42 @@ snippets:
       lbuffer: ^git\s
 
   # git rebase
-  - name: git rb
-    keyword: rb
-    snippet: rebase
-    context:
-      lbuffer: ^git\s
+  - name: git rebase
+    keyword: grb
+    snippet: git rebase
 
-  - name: git rbi
-    keyword: rbi
-    snippet: rebase -i
-    context:
-      lbuffer: ^git\s
+  - name: git rebase -i
+    keyword: grbi
+    snippet: git rebase -i
 
-  - name: git rbc
-    keyword: rbc
-    snippet: rebase --continue
-    context:
-      lbuffer: ^git\s
+  - name: git rebase --continue
+    keyword: grbc
+    snippet: git rebase --continue
+
+  # git status
+  - name: git stash
+    keyword: gst
+    snippet: git stash
+
+  - name: git stash list
+    keyword: gstl
+    snippet: git stash list
+
+  - name: git stash show
+    keyword: gsts
+    snippet: git stash show {{stash}}
+
+  - name: git stash apply
+    keyword: gsta
+    snippet: git stash apply {{stash}}
+
+  - name: git stash pop
+    keyword: gstp
+    snippet: git stash pop {{stash}}
+
+  - name: git stash drop
+    keyword: gstd
+    snippet: git stash drop {{stash}}
 
   # lazygit
   - name: lg
