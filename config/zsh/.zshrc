@@ -50,7 +50,7 @@ setopt PRINT_EIGHT_BIT
 setopt PUSHD_IGNORE_DUPS
 
 ### theme ###
-zinit light spaceship-prompt/spaceship-prompt
+eval "$(starship init zsh)"
 
 ### rbenv ###
 export PATH="$HOME/.rbenv/bin:$PATH"
