@@ -9,7 +9,7 @@ hook_add = '''
 colorscheme gruvbox
 '''
 
-### vim-airline ###
+### airline ###
 [[plugins]]
 repo = 'vim-airline/vim-airline'
 
@@ -19,7 +19,7 @@ hook_add = '''
 let g:airline_theme='gruvbox'
 '''
 
-### vim-gitgutter ###
+### Gitのステータスをファイル左横に表示するやつ ###
 [[plugins]]
 repo = 'airblade/vim-gitgutter'
 hook_add = '''
@@ -31,7 +31,7 @@ nnoremap ghu <Plug>(GitGutterUndoHunk)
 nnoremap ghp <Plug>(GitGutterPreviewHunk)
 '''
 
-### vim-fugitive ###
+### vim上でGit操作可能にするやつ ###
 [[plugins]]
 repo = 'tpope/vim-fugitive'
 hook_add = '''
@@ -45,22 +45,22 @@ nnoremap <Leader>glo :G log --oneline<CR>
 nnoremap <Leader>gb :G blame<CR>
 '''
 
-### fern.vim ###
+### ファイラー ###
 [[plugins]]
 repo = 'lambdalisue/fern.vim'
 hook_add = '''
 nnoremap <Leader>e <cmd>Fern . -reveal=%<CR>
 '''
 
-### lexima.vim ###
+### 「閉じ」文字を補完するやつ ###
 [[plugins]]
 repo = 'cohama/lexima.vim'
 
-### vim-surround ###
+### 「囲み」文字を簡単に操作するやつ ###
 [[plugins]]
 repo = 'tpope/vim-surround'
 
-### vim-json ###
+### JSONを扱いやすくするやつ ###
 [[plugins]]
 repo = 'elzr/vim-json'
 hook_add = '''
@@ -69,7 +69,7 @@ set concealcursor=niv
 let g:vim_json_syntax_conceal = 0
 '''
 
-### nerdcommenter ###
+### コメントアウト・解除を簡単にするやつ ###
 [[plugins]]
 repo = 'preservim/nerdcommenter'
 hook_add = '''
@@ -81,7 +81,7 @@ nmap <C-c> <Plug>NERDCommenterToggle
 vmap <C-c> <Plug>NERDCommenterToggle<CR>gv
 '''
 
-### fzf-preview.vim ###
+### fuzzy finder ###
 [[plugins]]
 repo = 'junegunn/fzf'
 build = 'bash install --bin'
@@ -102,6 +102,7 @@ nnoremap <silent><C-p>  <cmd>FzfPreviewProjectFilesRpc<CR>
 "nnoremap <silent><C-p>  :Files<CR>
 '''
 
+### 選択範囲を段階的に広げるやつ ###
 [[plugins]]
 repo = 'terryma/vim-expand-region'
 hook_add = '''
@@ -109,7 +110,7 @@ vmap v <Plug>(expand_region_expand)
 vmap V <Plug>(expand_region_shrink)
 '''
 
-### asynchronous lint engine ###
+### linter ###
 [[plugins]]
 repo = 'dense-analysis/ale'
 hook_add = '''
@@ -121,7 +122,7 @@ let g:ale_fixers = {
 \ }
 '''
 
-### nvim-treesitter ###
+### ハイライトを補強するやつ ###
 [[plugins]]
 repo = 'nvim-treesitter/nvim-treesitter'
 merged = 1
@@ -152,14 +153,15 @@ require'nvim-treesitter.configs'.setup {
 EOF
 '''
 
-### barbar.nvim ###
+### アイコン提供するやつ ###
 [[plugins]]
 repo = 'kyazdani42/nvim-web-devicons'
 
+### タブ操作を簡単にするやつ ###
 [[plugins]]
 repo = 'romgrk/barbar.nvim'
 
-### nvim-scrollview ###
+### 縦スクロールバーを表示するやつ ###
 [[plugins]]
 repo = 'dstein64/nvim-scrollview'
 hook_add = '''
@@ -168,6 +170,6 @@ command Bdelete silent! ScrollViewDisable | bdelete | silent! ScrollViewEnable
 nnoremap <silent><C-w> <cmd>Bdelete<CR>
 '''
 
-### vim-highlightedyank ###
+### yank範囲をハイライトするやつ ###
 [[plugins]]
 repo = 'machakann/vim-highlightedyank'
