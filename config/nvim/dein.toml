@@ -90,7 +90,7 @@ build = 'bash install --bin'
 repo = 'junegunn/fzf.vim'
 hook_add = '''
 nnoremap <Leader>z :FZF<CR>
-nnoremap <Leader>r :Rg
+nnoremap <Leader>r :Rg<SPACE>
 nnoremap <Leader>b :Buffers<CR>
 nnoremap <Leader>W :Windows<CR>
 nnoremap <Leader>H :History<CR>
