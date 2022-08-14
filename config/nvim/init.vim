@@ -112,7 +112,7 @@ nnoremap <Leader>h ^
 nnoremap <Leader>l $
 nnoremap <Leader>m %
 nnoremap <Leader>e :Lex<CR>
-nnoremap <Leader>f :%s/<C-r><C-w>//g<LEFT><LEFT>
+nnoremap <Leader>r :%s/<C-r><C-w>//g<LEFT><LEFT>
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
 
