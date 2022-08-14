@@ -1,0 +1,7 @@
+### Railsプロジェクト用プラグイン ###
+[[plugins]]
+repo = 'tpope/vim-rails'
+on_ft = ['ruby', 'eruby']
+hook_add = '''
+let g:rails_no_abbreviations = 1
+'''
