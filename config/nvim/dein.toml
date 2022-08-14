@@ -186,7 +186,3 @@ nnoremap <Leader>L <Plug>(easymotion-overwin-line)
 noremap  <Leader>w <Plug>(easymotion-bd-w)
 nnoremap <Leader>w <Plug>(easymotion-overwin-w)
 '''
-
-### GitHubのCopilotをvimから使えるようにするやつ ###
-[[plugins]]
-repo = 'github/copilot.vim'
