@@ -111,7 +111,7 @@ nnoremap <Leader>a ggVG
 nnoremap <Leader>h ^
 nnoremap <Leader>l $
 nnoremap <Leader>m %
-nnoremap <Leader>r :%s/<C-r><C-w>//g<LEFT><LEFT>
+nnoremap <Leader>R :%s/<C-r><C-w>//g<LEFT><LEFT>
 
 " #####################################
 " ### dein.vim
