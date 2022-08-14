@@ -173,3 +173,16 @@ nnoremap <silent><C-w> <cmd>Bdelete<CR>
 ### yank範囲をハイライトするやつ ###
 [[plugins]]
 repo = 'machakann/vim-highlightedyank'
+
+### フォーカス移動を自由自在にするやつ ###
+[[plugins]]
+repo = 'easymotion/vim-easymotion'
+hook_add = '''
+noremap  <Leader>f <Plug>(easymotion-bd-f)
+nnoremap <Leader>f <Plug>(easymotion-overwin-f)
+nnoremap <Leader>s <Plug>(easymotion-overwin-f2)
+noremap  <Leader>L <Plug>(easymotion-bd-jk)
+nnoremap <Leader>L <Plug>(easymotion-overwin-line)
+noremap  <Leader>w <Plug>(easymotion-bd-w)
+nnoremap <Leader>w <Plug>(easymotion-overwin-w)
+'''
