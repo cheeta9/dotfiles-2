@@ -56,11 +56,9 @@ eval "$(starship init zsh)"
 export PATH="$HOME/.rbenv/bin:$PATH"
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 ### nodebrew ###
-export PATH=$HOME/.nodebrew/current/bin:$PATH
-
-### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-export PATH="/Users/takahiro.sakaguchi/.rd/bin:$PATH"
-### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+export PATH="$HOME/.nodebrew/current/bin:$PATH"
+### Rancher Desktop ###
+export PATH="$HOME/.rd/bin:$PATH"
 
 ### key binds ###
 bindkey '^a' autosuggest-accept
