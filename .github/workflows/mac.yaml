@@ -9,4 +9,4 @@ jobs:
 
     steps:
       - name: Setup
-        run: curl -sL https://TB-takahiro-sakaguchi.github.io/dotfiles/install.sh | sh
+        run: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/TB-takahiro-sakaguchi/dotfiles/main/install.sh)"
