@@ -99,3 +99,112 @@ repo = 'neoclide/coc.nvim'
 rev = 'release'
 on_i = 1
 merged = '0'
+
+### linter ###
+[[plugins]]
+repo = 'dense-analysis/ale'
+hook_add = '''
+let g:ale_fix_on_save = 1
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines'],
+\   'c': ['clang-format'],
+\   'cpp': ['clang-format'],
+\ }
+'''
+
+### yank範囲をハイライトするやつ ###
+[[plugins]]
+repo = 'machakann/vim-highlightedyank'
+
+### 選択範囲を段階的に広げるやつ ###
+[[plugins]]
+repo = 'terryma/vim-expand-region'
+hook_add = '''
+vmap v <Plug>(expand_region_expand)
+vmap V <Plug>(expand_region_shrink)
+'''
+
+### アイコン提供するやつ ###
+[[plugins]]
+repo = 'kyazdani42/nvim-web-devicons'
+
+### タブ操作を簡単にするやつ ###
+[[plugins]]
+repo = 'romgrk/barbar.nvim'
+
+### JSONを扱いやすくするやつ ###
+[[plugins]]
+repo = 'elzr/vim-json'
+hook_add = '''
+set conceallevel=2
+set concealcursor=niv
+let g:vim_json_syntax_conceal = 0
+'''
+
+### 「閉じ」文字を補完するやつ ###
+[[plugins]]
+repo = 'cohama/lexima.vim'
+
+### 「囲み」文字を簡単に操作するやつ ###
+[[plugins]]
+repo = 'tpope/vim-surround'
+
+### コメントアウト・解除を簡単にするやつ ###
+[[plugins]]
+repo = 'preservim/nerdcommenter'
+hook_add = '''
+let g:NERDSpaceDelims = 1
+let g:NERDCompactSexyComs = 1
+let g:NERDDefaultAlign = 'left'
+
+nmap <C-c> <Plug>NERDCommenterToggle
+vmap <C-c> <Plug>NERDCommenterToggle<CR>gv
+'''
+
+### 縦スクロールバーを表示するやつ ###
+[[plugins]]
+repo = 'dstein64/nvim-scrollview'
+hook_add = '''
+" https://github.com/dstein64/nvim-scrollview/issues/10
+command Bdelete silent! ScrollViewDisable | bdelete | silent! ScrollViewEnable
+nnoremap <silent><C-w> <cmd>Bdelete<CR>
+'''
+
+### ハイライトを補強するやつ ###
+[[plugins]]
+repo = 'nvim-treesitter/nvim-treesitter'
+merged = 1
+# hook_post_update = 'TSUpdate'
+hook_add = '''
+lua <<EOF
+require'nvim-treesitter.configs'.setup {
+    ensure_installed = {
+        'bash',
+        'c',
+        'cpp',
+        'css',
+        'go',
+        'html',
+        'javascript',
+        'json',
+        'python',
+        'ruby',
+        'rust',
+        'toml',
+        'typescript',
+    },
+    highlight = {
+        enable = true,
+        disable = {},
+    },
+}
+EOF
+'''
+
+### Railsプロジェクト用プラグイン ###
+[[plugins]]
+repo = 'tpope/vim-rails'
+on_ft = ['ruby', 'eruby']
+hook_add = '''
+let g:rails_no_abbreviations = 1
+'''
