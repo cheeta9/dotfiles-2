@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 INSTALL_DIR="${INSTALL_DIR:-$HOME/repos/github.com/TB-takahiro-sakaguchi/dotfiles}"
 
 if [ -d "$INSTALL_DIR" ]; then
