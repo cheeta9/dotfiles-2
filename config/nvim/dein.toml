@@ -92,3 +92,10 @@ nnoremap <Leader>L <Plug>(easymotion-overwin-line)
 noremap  <Leader>w <Plug>(easymotion-bd-w)
 nnoremap <Leader>w <Plug>(easymotion-overwin-w)
 '''
+
+### 補完のやつ ###
+[[plugins]]
+repo = 'neoclide/coc.nvim'
+rev = 'release'
+on_i = 1
+merged = '0'

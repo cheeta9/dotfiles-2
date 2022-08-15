@@ -87,13 +87,6 @@ nnoremap <silent><C-w> <cmd>Bdelete<CR>
 [[plugins]]
 repo = 'machakann/vim-highlightedyank'
 
-### 補完のやつ ###
-[[plugins]]
-repo = 'neoclide/coc.nvim'
-rev = 'release'
-on_i = 1
-merged = '0'
-
 ### linter ###
 [[plugins]]
 repo = 'dense-analysis/ale'
