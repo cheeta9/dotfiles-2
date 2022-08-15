@@ -1,6 +1,7 @@
 ## Installation
 
 ![](https://github.com/TB-takahiro-sakaguchi/dotfiles/workflows/macOS/badge.svg)
+![](https://github.com/TB-takahiro-sakaguchi/dotfiles/workflows/Ubuntu/badge.svg)
 ![](https://github.com/TB-takahiro-sakaguchi/dotfiles/workflows/Lint/badge.svg)
 
 ```shell
