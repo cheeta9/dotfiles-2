@@ -1,15 +1,15 @@
-### editorconfig-vim ###
+# editorconfig-vim
 [[plugins]]
 repo = 'editorconfig/editorconfig-vim'
 
-### colorschemes ###
+# colorschemes
 [[plugins]]
 repo = 'morhetz/gruvbox'
 hook_add = '''
 colorscheme gruvbox
 '''
 
-### airline ###
+# airline
 [[plugins]]
 repo = 'vim-airline/vim-airline'
 
@@ -19,7 +19,7 @@ hook_add = '''
 let g:airline_theme='gruvbox'
 '''
 
-### Gitのステータスをファイル左横に表示するやつ ###
+# Gitのステータスをファイル左横に表示するやつ
 [[plugins]]
 repo = 'airblade/vim-gitgutter'
 hook_add = '''
@@ -31,7 +31,7 @@ nnoremap ghu <Plug>(GitGutterUndoHunk)
 nnoremap ghp <Plug>(GitGutterPreviewHunk)
 '''
 
-### vim上でGit操作可能にするやつ ###
+# vim上でGit操作可能にするやつ
 [[plugins]]
 repo = 'tpope/vim-fugitive'
 hook_add = '''
@@ -45,14 +45,14 @@ nnoremap <Leader>glo :G log --oneline<CR>
 nnoremap <Leader>gb :G blame<CR>
 '''
 
-### ファイラー ###
+# ファイラー
 [[plugins]]
 repo = 'lambdalisue/fern.vim'
 hook_add = '''
 nnoremap <Leader>e <cmd>Fern . -reveal=%<CR>
 '''
 
-### fuzzy finder ###
+# fuzzy finder
 [[plugins]]
 repo = 'junegunn/fzf'
 build = 'bash install --bin'
@@ -80,7 +80,7 @@ nnoremap <silent><C-p>  <cmd>FzfPreviewProjectFilesRpc<CR>
 "nnoremap <silent><C-p>  :Files<CR>
 '''
 
-### フォーカス移動を自由自在にするやつ ###
+# フォーカス移動を自由自在にするやつ
 [[plugins]]
 repo = 'easymotion/vim-easymotion'
 hook_add = '''
@@ -93,11 +93,11 @@ noremap  <Leader>w <Plug>(easymotion-bd-w)
 nnoremap <Leader>w <Plug>(easymotion-overwin-w)
 '''
 
-### yank範囲をハイライトするやつ ###
+# yank範囲をハイライトするやつ
 [[plugins]]
 repo = 'machakann/vim-highlightedyank'
 
-### 選択範囲を段階的に広げるやつ ###
+# 選択範囲を段階的に広げるやつ
 [[plugins]]
 repo = 'terryma/vim-expand-region'
 hook_add = '''
@@ -105,15 +105,15 @@ vmap v <Plug>(expand_region_expand)
 vmap V <Plug>(expand_region_shrink)
 '''
 
-### アイコン提供するやつ ###
+# アイコン提供するやつ
 [[plugins]]
 repo = 'kyazdani42/nvim-web-devicons'
 
-### タブ操作を簡単にするやつ ###
+# タブ操作を簡単にするやつ
 [[plugins]]
 repo = 'romgrk/barbar.nvim'
 
-### JSONを扱いやすくするやつ ###
+# JSONを扱いやすくするやつ
 [[plugins]]
 repo = 'elzr/vim-json'
 hook_add = '''
@@ -122,15 +122,15 @@ set concealcursor=niv
 let g:vim_json_syntax_conceal = 0
 '''
 
-### 「閉じ」文字を補完するやつ ###
+# 「閉じ」文字を補完するやつ
 [[plugins]]
 repo = 'cohama/lexima.vim'
 
-### 「囲み」文字を簡単に操作するやつ ###
+# 「囲み」文字を簡単に操作するやつ
 [[plugins]]
 repo = 'tpope/vim-surround'
 
-### コメントアウト・解除を簡単にするやつ ###
+# コメントアウト・解除を簡単にするやつ
 [[plugins]]
 repo = 'preservim/nerdcommenter'
 hook_add = '''
@@ -142,7 +142,7 @@ nmap <C-c> <Plug>NERDCommenterToggle
 vmap <C-c> <Plug>NERDCommenterToggle<CR>gv
 '''
 
-### 縦スクロールバーを表示するやつ ###
+# 縦スクロールバーを表示するやつ
 [[plugins]]
 repo = 'dstein64/nvim-scrollview'
 hook_add = '''
@@ -151,7 +151,7 @@ command Bdelete silent! ScrollViewDisable | bdelete | silent! ScrollViewEnable
 nnoremap <silent><C-w> <cmd>Bdelete<CR>
 '''
 
-### ハイライトを補強するやつ ###
+# ハイライトを補強するやつ
 [[plugins]]
 repo = 'nvim-treesitter/nvim-treesitter'
 merged = 1
@@ -182,6 +182,6 @@ require'nvim-treesitter.configs'.setup {
 EOF
 '''
 
-### Denoプラグインに必要なやつ ###
+# Denoプラグインに必要なやつ
 [[plugins]]
 repo = 'vim-denops/denops.vim'

@@ -1,4 +1,4 @@
-### 補完のやつ ###
+# 補完のやつ
 [[plugins]]
 repo = 'Shougo/ddc.vim'
 on_event = 'InsertEnter'
@@ -34,7 +34,7 @@ on_source = 'ddc.vim'
 repo = 'Shougo/ddc-sorter_rank'
 on_source = 'ddc.vim'
 
-### lsp ###
+# lsp
 [[plugins]]
 repo = 'neovim/nvim-lspconfig'
 on_event = 'BufEnter'
@@ -53,7 +53,7 @@ EOF
 repo = 'williamboman/nvim-lsp-installer'
 on_source = 'nvim-lspconfig'
 
-### Railsプロジェクト用プラグイン ###
+# Railsプロジェクト用プラグイン
 [[plugins]]
 repo = 'tpope/vim-rails'
 on_ft = ['ruby', 'eruby']
