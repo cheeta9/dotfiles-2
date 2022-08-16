@@ -93,25 +93,6 @@ noremap  <Leader>w <Plug>(easymotion-bd-w)
 nnoremap <Leader>w <Plug>(easymotion-overwin-w)
 '''
 
-### 補完のやつ ###
-[[plugins]]
-repo = 'neoclide/coc.nvim'
-rev = 'release'
-on_i = 1
-merged = '0'
-
-### linter ###
-[[plugins]]
-repo = 'dense-analysis/ale'
-hook_add = '''
-let g:ale_fix_on_save = 1
-let g:ale_fixers = {
-\   '*': ['remove_trailing_lines'],
-\   'c': ['clang-format'],
-\   'cpp': ['clang-format'],
-\ }
-'''
-
 ### yank範囲をハイライトするやつ ###
 [[plugins]]
 repo = 'machakann/vim-highlightedyank'
