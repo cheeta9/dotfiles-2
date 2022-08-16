@@ -79,7 +79,11 @@ require('lspconfig')['solargraph'].setup{
     on_attach = on_attach,
     flags = lsp_flags,
     -- Server-specific settings...
-    settings = { ['solargraph'] = { 'solargraph.commandPath': '$HOME/.rbenv/shims/solargraph' } }
+    settings = {
+      solargraph = {
+        solargraph.commandPath = '$HOME/.rbenv/shims/solargraph'
+      }
+    }
 }
 require('lspconfig')['tsserver'].setup{
     on_attach = on_attach,
