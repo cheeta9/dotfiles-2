@@ -76,27 +76,6 @@ set history=10000                               "コマンド、検索の履歴�
 set mouse=a                                     "マウスモード有効
 
 " #####################################
-" ### dein.vim
-" #####################################
-set runtimepath+=$XDG_DATA_HOME/dein/repos/github.com/Shougo/dein.vim
-
-if dein#load_state($XDG_DATA_HOME . '/dein')
-    call dein#begin($XDG_DATA_HOME . '/dein')
-
-    call dein#load_toml($XDG_CONFIG_HOME . '/nvim/dein.toml')
-
-    call dein#end()
-    call dein#save_state()
-endif
-
-filetype plugin indent on
-syntax enable
-
-if dein#check_install()
-    call dein#install()
-endif
-
-" #####################################
 " ### Tab Split settings
 " #####################################
 nnoremap s <Nop>
@@ -133,6 +112,27 @@ nnoremap <Leader>h ^
 nnoremap <Leader>l $
 nnoremap <Leader>m %
 nnoremap <Leader>R :%s/<C-r><C-w>//g<LEFT><LEFT>
+
+" #####################################
+" ### dein.vim
+" #####################################
+set runtimepath+=$XDG_DATA_HOME/dein/repos/github.com/Shougo/dein.vim
+
+if dein#load_state($XDG_DATA_HOME . '/dein')
+    call dein#begin($XDG_DATA_HOME . '/dein')
+
+    call dein#load_toml($XDG_CONFIG_HOME . '/nvim/dein.toml')
+
+    call dein#end()
+    call dein#save_state()
+endif
+
+filetype plugin indent on
+syntax enable
+
+if dein#check_install()
+    call dein#install()
+endif
 
 " #####################################
 " ### coc settings
