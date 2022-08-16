@@ -81,7 +81,8 @@ require('lspconfig')['solargraph'].setup{
     -- Server-specific settings...
     settings = {
       solargraph = {
-        commandPath = '$HOME/.rbenv/shims/solargraph'
+        commandPath = '$HOME/.rbenv/shims/solargraph',
+        diagnostic = false
       }
     }
 }
