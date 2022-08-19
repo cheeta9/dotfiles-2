@@ -82,7 +82,8 @@ require('lspconfig')['solargraph'].setup{
     settings = {
       ['solargraph'] = {
         commandPath = '$HOME/.rbenv/shims/solargraph',
-        diagnostic = false
+        diagnostic = false,
+        useBundler = true
       }
     }
 }
