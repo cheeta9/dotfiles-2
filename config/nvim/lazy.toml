@@ -75,19 +75,17 @@ local lsp_flags = {
   -- This is the default in Nvim 0.7+
   debounce_text_changes = 150,
 }
-require('lspconfig')['solargraph'].setup{
+require('lspconfig')['solargraph'].setup {
     on_attach = on_attach,
     flags = lsp_flags,
     -- Server-specific settings...
     settings = {
-      ['solargraph'] = {
-        commandPath = '$HOME/.rbenv/shims/solargraph',
-        diagnostic = false,
+      solargraph = {
         useBundler = true
       }
     }
 }
-require('lspconfig')['tsserver'].setup{
+require('lspconfig')['tsserver'].setup {
     on_attach = on_attach,
     flags = lsp_flags,
 }
