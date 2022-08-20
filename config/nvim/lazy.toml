@@ -45,7 +45,6 @@ on_source = 'ddc.vim'
 repo = 'neovim/nvim-lspconfig'
 on_event = 'BufEnter'
 hook_source= '''
-lua << EOF
 local opts = { noremap=true, silent=true }
 vim.keymap.set('n', '<C-e>', vim.diagnostic.open_float, opts)
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
@@ -69,11 +68,11 @@ end
 local lsp_flags = {
   debounce_text_changes = 150,
 }
-require('lspconfig').solargraph.setup {
+require('lspconfig')['solargraph'].setup {
     on_attach = on_attach,
     flags = lsp_flags,
     settings = {
-      solargraph = {
+      ['solargraph'] = {
         useBundler = true,
       },
     },
@@ -82,7 +81,6 @@ require('lspconfig')['tsserver'].setup{
     on_attach = on_attach,
     flags = lsp_flags,
 }
-EOF
 '''
 
 [[plugins]]
