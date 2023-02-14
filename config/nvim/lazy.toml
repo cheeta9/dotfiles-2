@@ -25,6 +25,10 @@ hook_source = '''
 '''
 
 [[plugins]]
+repo = 'Shougo/pum.vim'
+on_source = 'ddc.vim'
+
+[[plugins]]
 repo = 'Shougo/ddc-nvim-lsp'
 on_source = 'ddc.vim'
 
